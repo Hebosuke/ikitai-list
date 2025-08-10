@@ -1,10 +1,9 @@
-<script>
+document.addEventListener('DOMContentLoaded', () => {
   const buttons = document.querySelectorAll('.filter-btn');
   const cards = document.querySelectorAll('.card');
 
   buttons.forEach(button => {
     button.addEventListener('click', () => {
-      // activeクラスの切り替え
       buttons.forEach(btn => btn.classList.remove('active'));
       button.classList.add('active');
 
@@ -19,4 +18,4 @@
       });
     });
   });
-</script>
+});
