@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>行きたいところリスト</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .hero h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      padding: 15px 30px;
+      border-radius: 8px;
+      font-size: 2.5em;
+      margin: 0;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px 40px;
+    }
+    .card {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      padding: 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .card .image-container {
+      position: relative;
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+    .card h2 {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 5px 10px;
+      margin: 0;
+      font-size: 1.2em;
+      border-radius: 4px;
+    }
+    .card-content {
+      padding: 15px;
+    }
+    .card-content a {
+      display: block;
+      margin-bottom: 5px;
+      color: #0077cc;
+      text-decoration: none;
+    }
+    .card-content a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <img src="https://cdn.pixabay.com/photo/2022/09/03/14/32/airplane-7429725_1280.jpg">
+    <h1>行きたいところリスト</h1>
+  </div>
+
+  <div class="container">
+
+    <div class="card">
+      <div class="image-container">
+        <img src="https://www.okuibuki.co.jp/app/wp-content/uploads/2023/12/img_01.jpg">
+        <h2>アウトレットパーク竜王</h2>
+      </div>
+      <div class="card-content">
+        <a href="https://mitsui-shopping-park.com/mop/shiga/" target="_blank" rel="noopener noreferrer">紹介ページを見る</a>
+        <a href="https://maps.app.goo.gl/YLR12U5YUQu6xqhT8" target="_blank" rel="noopener noreferrer">地図で見る</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="image-container">
+        <img src="https://www.expo70-park.jp/sys/wp-content/uploads/v-1-640x674.jpg">
+        <h2>万博記念公園夏祭り</h2>
+      </div>
+      <div class="card-content">
+        <a href="https://www.expo70-park.jp/event/71406/" target="_blank" rel="noopener noreferrer">紹介ページを見る</a>
+        <a href="https://maps.app.goo.gl/9A5xk7TvrvUkyHgT7" target="_blank" rel="noopener noreferrer">地図で見る</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="image-container">
+        <img src="https://www.awanavi.jp/wp-content/uploads/life/41437_312411_img.jpg">
+        <h2>大塚国際美術館</h2>
+      </div>
+      <div class="card-content">
+        <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.awanavi.jp/archives/spot/19007&ved=2ahUKEwju1oqK_fiOAxVLjq8BHZyCIUMQFnoECFwQAQ&usg=AOvVaw1x6JDtt8Y4iUh7AGCaYmf1" target="_blank" rel="noopener noreferrer">紹介ページを見る</a>
+        <a href="https://maps.app.goo.gl/21pRSB8eHKAPvVgL7" target="_blank" rel="noopener noreferrer">地図で見る</a>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
+
