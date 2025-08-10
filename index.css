@@ -1,3 +1,10 @@
+body {
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
 .hero h1 {
   font-size: clamp(1.5rem, 5vw, 2.5rem);
 }
