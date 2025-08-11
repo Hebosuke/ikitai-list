@@ -1,0 +1,110 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+}
+
+.hero {
+  position: relative;      /* 子要素の絶対配置基準に */
+  width: 100%;
+  height: 300px;           /* 画像の高さを決める */
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* 画像の表示をカバーさせる */
+  display: block;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 50%;                /* 縦方向中央 */
+  left: 50%;               /* 横方向中央 */
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  margin: 0;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.filter-area {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+select {
+  padding: 8px 12px;
+  font-size: 1em;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 30px;
+  padding: 0 20px 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.card h2 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px;
+  margin: 0;
+  font-size: 1.2em;
+  border-radius: 4px;
+}
+
+.card .image-container {
+  position: relative;
+  overflow: hidden;
+  height: 180px;
+}
+
+.card .card-content {
+  padding: 15px;
+}
+
+.card .card-content a {
+  display: block;
+  margin-bottom: 5px;
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.card .card-content a:hover {
+  text-decoration: underline;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
