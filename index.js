@@ -1,23 +1,27 @@
-// HTMLの読み込みが完了してから実行
 document.addEventListener('DOMContentLoaded', () => {
-  const buttons = document.querySelectorAll('.filter-btn');
+  const categoryFilter = document.getElementById('categoryFilter');
+  const regionFilter = document.getElementById('regionFilter');
   const cards = document.querySelectorAll('.card');
 
-  buttons.forEach(button => {
-    button.addEventListener('click', () => {
-      // ボタンのアクティブ状態を切り替え
-      buttons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
+  function filterCards() {
+    const selectedCategory = categoryFilter.value;
+    const selectedRegion = regionFilter.value;
 
-      const filter = button.getAttribute('data-filter');
+    cards.forEach(card => {
+      const cardCategory = card.getAttribute('data-category');
+      const cardRegion = card.getAttribute('data-region');
 
-      cards.forEach(card => {
-        if(filter === 'all' || card.getAttribute('data-category') === filter){
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
-        }
-      });
+      const matchCategory = selectedCategory === 'all' || cardCategory === selectedCategory;
+      const matchRegion = selectedRegion === 'all' || cardRegion === selectedRegion;
+
+      if (matchCategory && matchRegion) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
     });
-  });
+  }
+
+  categoryFilter.addEventListener('change', filterCards);
+  regionFilter.addEventListener('change', filterCards);
 });
