@@ -5,27 +5,60 @@ body {
   padding: 0;
 }
 
-.hero h1 {
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
+.hero {
+  background: #0077cc;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
-.filter-buttons {
-  margin-bottom: 30px;
+.hero h1 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  margin: 0;
 }
-.filter-btn {
-  background-color: #eee;
-  border: none;
-  padding: 8px 15px;
-  margin: 0 5px 10px 5px;
+
+.filter-area {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+select {
+  padding: 8px 12px;
   font-size: 1em;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
-.filter-btn:hover {
-  background-color: #ddd;
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 20px 20px;
 }
-.filter-btn.active {
-  background-color: #0077cc;
-  color: white;
+
+.card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.card p {
+  padding: 10px;
+  margin: 0;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.card:hover img {
+  transform: scale(1.05);
 }
