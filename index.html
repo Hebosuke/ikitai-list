@@ -117,11 +117,24 @@
     <button class="filter-btn" data-filter="お寺">お寺</button>
     <button class="filter-btn" data-filter="ホテル">ホテル</button>
     <button class="filter-btn" data-filter="スタジオ">スタジオ</button>
-   </div>
+  </div>
+
+  <select id="regionFilter">
+      <option value="all">すべての地方</option>
+      <option value="hokkaido">北海道</option>
+      <option value="tohoku">東北</option>
+      <option value="kanto">関東</option>
+      <option value="thubu">中部</option>
+      <option value="kinki">近畿</option>
+      <option value="sikoku">四国</option>
+      <option value="thugoku">中国</option>
+      <option value="kyusyu">九州</option>
+    </select>
+  </div>
 
   <div class="container">
 
-    <div class="card" data-category="アウトレット">
+    <div class="card" data-category="アウトレット" data-region="kinki">
       <div class="image-container">
         <img src="https://www.okuibuki.co.jp/app/wp-content/uploads/2023/12/img_01.jpg">
         <h2>アウトレットパーク竜王</h2>
@@ -132,7 +145,7 @@
       </div>
     </div>
 
-    <div class="card" data-category="祭り">
+    <div class="card" data-category="祭り" data-region="kinki">
       <div class="image-container">
         <img src="https://www.expo70-park.jp/sys/wp-content/uploads/v-1-640x674.jpg">
         <h2>万博記念公園夏祭り</h2>
@@ -143,7 +156,7 @@
       </div>
     </div>
 
-    <div class="card" data-category="美術館">
+    <div class="card" data-category="美術館" data-region="sikoku">
       <div class="image-container">
         <img src="https://www.awanavi.jp/wp-content/uploads/life/41437_312411_img.jpg">
         <h2>大塚国際美術館</h2>
@@ -154,7 +167,7 @@
       </div>
     </div>
 
-    <div class="card" data-category="自然">
+    <div class="card" data-category="自然" data-region="kinki">
       <div class="image-container">
         <img src="https://soniexperience.jp/wprs/wp-content/uploads/2021/01/8b4e00cdde814f43ba59f9964868bb08.jpg">
         <h2>曽爾高原</h2>
@@ -165,7 +178,7 @@
       </div>
     </div>
 
-    <div class="card" data-category="お寺">
+    <div class="card" data-category="お寺" data-region="kinki">
       <div class="image-container">
         <img src="https://isuta.jp/wp-content/uploads/2025/04/media_6eac2ecbcb7095c08df4099879381e32f51f3eda.webp">
         <h2>両足院</h2>
@@ -176,7 +189,7 @@
       </div>
     </div>
 
-    <div class="card" data-category="自然">
+    <div class="card" data-category="自然" data-region="thubu">
       <div class="image-container">
         <img src="https://www.city.hida.gifu.jp/uploaded/image/4014.jpg">
         <h2>岐阜県飛騨市レールマウンテン</h2>
@@ -188,7 +201,7 @@
       </div>
     </div>
 
-    <div class="card" data-category="体験">
+    <div class="card" data-category="体験" data-region="kinki">
       <div class="image-container">
         <img src="https://morinokyoto.jp/manager/wp-content/uploads/2022/03/AOA8497_ShizushiShounyuudou_AO-1.jpg">
         <h2>京丹波質志鐘乳洞体験</h2>
@@ -199,7 +212,7 @@
       </div>
     </div>
 
-    <div class="card" data-category="自然">
+    <div class="card" data-category="自然" data-region="kinki">
       <div class="image-container">
         <img src="https://kinarito.net/wp-content/uploads/2021/02/for-sightseen-detail.jpg">
         <h2>不動七重の滝</h2>
@@ -210,7 +223,7 @@
       </div>
     </div>
 
-    <div class="card" data-category="温泉">
+    <div class="card" data-category="温泉" data-region="kanto">
       <div class="image-container">
         <img src="https://res.cloudinary.com/tabikobo/images/f_auto,q_auto/v1689885822/wordpress_tabi-pocket/02d0461ffb115d6f313070a72b5e1872/02d0461ffb115d6f313070a72b5e1872.jpg?_i=AA">
         <h2>箱根温泉</h2>
@@ -221,7 +234,7 @@
       </div>
     </div>
 
-    <div class="card" data-category="温泉">
+    <div class="card" data-category="温泉" data-region="thubu">
       <div class="image-container">
         <img src="https://www.kusatsu-onsen.ne.jp/img/onsen/photo01.jpg">
         <h2>草津温泉</h2>
@@ -232,7 +245,7 @@
       </div>
     </div>
 
-    <div class="card" data-category="スタジオ">
+    <div class="card" data-category="スタジオ" data-region="kanto">
       <div class="image-container">
         <img src="https://static.gltjp.com/glt/data/directory/15000/14393/20230411_184112_8b7f8c21_w1920.webp">
         <h2>ワーナーブラザーズスタジオツアー東京</h2>
@@ -243,7 +256,7 @@
       </div>
     </div>
 
-    <div class="card" data-category="ホテル">
+    <div class="card" data-category="ホテル" data-region="hokkaido">
       <div class="image-container">
         <img src="https://www.snowtomamu.jp/assets/images/reserve/slide02.jpg">
         <h2>星野リゾート　トマム</h2>
@@ -254,7 +267,7 @@
       </div>
     </div>
 
-    <div class="card" data-category="体験">
+    <div class="card" data-category="体験" data-region="kanto">
       <div class="image-container">
         <img src="https://www.yomiuri.co.jp/media/2023/10/20231011-OYT1I50023-1.jpg?type=large">
         <h2>サントリー 山崎蒸溜所</h2>
